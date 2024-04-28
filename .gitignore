@@ -1,2 +1,5 @@
 {\rtf1}
-*.vcxproj*
+\Debug
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
