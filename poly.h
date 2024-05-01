@@ -17,10 +17,11 @@ typedef struct Polynomial {
 	polyTerm* last;
 }Polynomial;
 
-void error_print(const char* message);
-void polyPrint(Polynomial* poly);
 Polynomial* create();
 Polynomial* insert(Polynomial* poly, int coef, int degree);
+Polynomial* add_poly(Polynomial* poly1, Polynomial* poly2, Polynomial* result);
+void error_print(const char* message);
+void polyPrint(Polynomial* poly);
 void poly_test();
 
 #endif // _POLY_H_
