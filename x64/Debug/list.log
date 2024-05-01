@@ -1,0 +1,15 @@
+﻿  dlist.cpp
+  simple_list.cpp
+  Generating Code...
+  poly.c
+C:\Users\82102\source\repos\list\list\poly.c(6,6): warning C4013: 'exit' undefined; assuming extern returning int
+  main.c
+C:\Users\82102\source\repos\list\list\main.c(6,6): warning C4013: 'exit' undefined; assuming extern returning int
+  Generating Code...
+C:\Users\82102\source\repos\list\list\main.c(61): warning C4715: 'insert': not all control paths return a value
+C:\Users\82102\source\repos\list\list\poly.c(61): warning C4715: 'insert': not all control paths return a value
+main.obj : error LNK2005: create already defined in poly.obj
+main.obj : error LNK2005: error_print already defined in poly.obj
+main.obj : error LNK2005: insert already defined in poly.obj
+main.obj : error LNK2005: polyPrint already defined in poly.obj
+C:\Users\82102\source\repos\list\x64\Debug\list.exe : fatal error LNK1169: one or more multiply defined symbols found

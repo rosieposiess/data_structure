@@ -77,36 +77,33 @@ Node* concat_simple_list(Node* head1, Node* head2) {
 }
 
 
-/*
-//main
-int main() {
+
+void simple_test() {
 	Node* head = NULL;
 	int num;
 	for (int i = 0; i < 5; i++) {
-		head = insert_first(head, i);
-		print_list(head);
+		head = insert_first_simple(head, i);
+		print_simple_list(head);
 	}
 
 	num = 2;
-	if (search_list(head, num) != NULL) {
+	if (search_simple_list(head, num) != NULL) {
 		printf("List에서 %d 찾음\n", num);
 	}
 	else printf("List에서 %d 못 찾음\n", num);
 
 	num = 7;
-	if (search_list(head, num) != NULL) {
+	if (search_simple_list(head, num) != NULL) {
 		printf("List에서 %d 찾음\n", num);
 	}
 	else printf("List에서 %d 못 찾음\n", num);
 
 	Node* head2 = NULL;
 	for (int i = 6; i < 10; i++) {
-		head2 = insert_first(head2, i);
-		print_list(head2);
+		head2 = insert_first_simple (head2, i);
+		print_simple_list(head2);
 	}
-	head = concat_list(head, head2);
-	print_list(head);
+	head = concat_simple_list(head, head2);
+	print_simple_list(head);
 
-	return 0;
 }
-*/

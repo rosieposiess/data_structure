@@ -28,8 +28,8 @@ void print_dlist(dListNode* head) {
 	printf("\n");
 }
 
-/*
-int main() {
+
+void dlist_test() {
 	dListNode* head = (dListNode*)malloc(sizeof(dListNode));
 	dInit(head);
 	printf("첫 위치에 노드 5개 순차적 추가\n");
@@ -44,6 +44,4 @@ int main() {
 		print_dlist(head);
 	}
 	free(head);
-	return 0;
 }
-*/

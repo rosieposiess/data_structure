@@ -17,3 +17,4 @@ Node* del_simple(Node* head, Node* pre);
 Node* search_simple_list(Node* head, element val);
 Node* concat_simple_list(Node* head1, Node* head2);
 void print_simple_list(Node* head);
+void simple_test();
