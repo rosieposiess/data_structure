@@ -14,8 +14,22 @@ Polynomial* create() {
 	return poly;
 }
 
+void* clear(Polynomial* poly) {
+	polyTerm* p = poly->head;
+	polyTerm* q = NULL;
+	
+	for (; p != NULL; p = q) {
+		q = p->link;
+		free(p);
+	}
+	free(q);
+}
+
 //내림차순으로 insert
 Polynomial*insert(Polynomial*poly, int coef, int degree){
+	
+	if (coef == 0) { return; }
+
 	polyTerm* term = (polyTerm*)malloc(sizeof(polyTerm));
 	term->coef = coef;
 	term->degree = degree;
@@ -109,10 +123,33 @@ void polyPrint(Polynomial* poly) {
 
 }
 
+
+Polynomial* product_poly(Polynomial* poly1, Polynomial* poly2, Polynomial* result) {
+	for (polyTerm* p = poly1->head; p != NULL; p = p->link) {
+		for (polyTerm* q = poly2->head; q != NULL; q = q->link) {
+			insert(result, p->coef * q->coef, p->degree + q->degree);
+		}
+	}
+	return result;
+}
+
+Polynomial* diff_poly(Polynomial* poly, Polynomial* result) {
+	for (polyTerm* p = poly->head; p != NULL; p = p->link) {
+		if (p->degree == 0) return result;
+		else insert(result, p->coef * p->degree, p->degree - 1);
+	}
+	return result;
+}
+
+
 void poly_test() {
-	Polynomial *p1 = create();
-	Polynomial *p2 = create();
-	Polynomial *p3 = create();
+	Polynomial *p1 = create(); //p1:4x ^ 8 + 4x ^ 1 + 1 (size : 3)
+	Polynomial *p2 = create(); //p2 : 5x ^ 9 + 3x ^ 6 (size : 2)
+	Polynomial *sum = create();
+	Polynomial* product = create();
+	Polynomial* diff = create();
+	Polynomial* integral = create();
+
 
 	//첫번째 다항식
 	insert(p1, 4, 8);
@@ -129,7 +166,19 @@ void poly_test() {
 	printf("p2:");
 	polyPrint(p2);
 
-	add_poly(p1, p2, p3);
-	printf("sum:");
-	polyPrint(p3);
+	printf("============================\n");
+
+	add_poly(p1, p2, sum);
+	printf("sum of p1 & p2: ");
+	polyPrint(sum);
+
+	product_poly(p1, p2, product);
+	printf("product of p1 & p2: ");
+	polyPrint(product);
+
+
+	diff_poly(p1,diff);
+	printf("differential of p1: ");
+	polyPrint(diff);
+
 }

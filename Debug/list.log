@@ -1,3 +1,8 @@
-﻿  poly.c
-C:\Users\82102\source\repos\list\list\poly.c(67): warning C4715: 'insert': not all control paths return a value
+﻿  main.c
+  poly.c
+C:\Users\82102\source\repos\list\list\poly.c(29,57): warning C4028: formal parameter 2 different from declaration
+C:\Users\82102\source\repos\list\list\poly.c(31,25): warning C4033: 'insert' must return a value
+  Generating Code...
+C:\Users\82102\source\repos\list\list\poly.c(26): warning C4716: 'clear': must return a value
+C:\Users\82102\source\repos\list\list\poly.c(81): warning C4715: 'insert': not all control paths return a value
   list.vcxproj -> C:\Users\82102\source\repos\list\Debug\list.exe

@@ -5,8 +5,8 @@
 typedef int element;
 typedef struct dListNode {
 	element data;
-	dListNode* left;
-	dListNode* right;
+	struct dListNode* left;
+	struct dListNode* right;
 }dListNode;
 
 void dInit(dListNode*head);
