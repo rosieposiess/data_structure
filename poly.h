@@ -3,7 +3,6 @@
 
 #include <stdio.h>
 #include <malloc.h>
-#include <stdlib.h>
 
 typedef struct polyTerm {
 	int coef;
@@ -22,7 +21,6 @@ Polynomial* insert(Polynomial* poly, float coef, int degree);
 Polynomial* add_poly(Polynomial* poly1, Polynomial* poly2, Polynomial* result);
 Polynomial* product_poly(Polynomial* poly1, Polynomial* poly2, Polynomial* result);
 Polynomial* diff_poly(Polynomial* poly, Polynomial* result);
-void error_print(const char* message);
 void polyPrint(Polynomial* poly);
 void poly_test();
 

@@ -1,6 +1,6 @@
-#include "poly.h"
+#include "stack.h"
 
 int main() {
-	poly_test();
+	test_stack();
 	return 0;
 }

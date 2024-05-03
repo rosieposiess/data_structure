@@ -1,11 +1,6 @@
 //´ÙÇ×½Ä µ¡¼ÀÀ» simple linked list·Î ±¸Çö
 #include "poly.h"
 
-void error_print(const char* message) {
-	printf("%s\n", message);
-	exit(1);
-}
-
 Polynomial* create() {
 	Polynomial* poly = (Polynomial*)malloc(sizeof(Polynomial));
 	poly->head = NULL;
