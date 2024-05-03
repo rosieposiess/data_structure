@@ -10,3 +10,4 @@
 ### 기본
 - 이중 연결 리스트 구현: `dlist.c`,`dlist.h`
 - 단순 연결 리스트 구현: `simple_list.c`,`simple_list.h`
+- 단순 연결리스트로 스택 구현: `stack.c`,`stack.h`
