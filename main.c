@@ -1,6 +1,6 @@
 #include "stack.h"
 
 int main() {
-	test_stack();
+	test_p();
 	return 0;
 }

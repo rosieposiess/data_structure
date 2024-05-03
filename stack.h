@@ -6,7 +6,7 @@
 #define TRUE 1
 #define FALSE 0
 
-typedef int element;
+typedef char element;
 
 typedef struct StackNode {
 	element data;
@@ -25,3 +25,5 @@ void push(Stack* s, element e);
 void print_stack(Stack* s);
 void test_stack();
 int search(Stack* s, element e);
+void test_p();
+int check_paren(Stack* stack, const char* s);

@@ -7,7 +7,7 @@
 typedef int element;
 typedef struct Node {
 	element val;
-	Node* next;
+	struct Node* next;
 }Node;
 
 Node* insert_first_simple(Node* head, element val);

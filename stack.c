@@ -23,9 +23,10 @@ element pop(Stack*s) {
 		error("Stack is empty!\n");
 	}
 	StackNode* tmp = s->top;
+	element data = tmp->data;
 	s->top = s->top->next;
 	free(tmp);
-	return tmp->data;
+	return data;
 }
 
 //push
@@ -51,7 +52,7 @@ void print_stack(Stack* s) {
 		return;
 	}
 	for (StackNode* p = s->top; p != NULL; p = p->next) {
-		printf("%d -> ", p->data);
+		printf("%c -> ", p->data);
 	}
 	printf("NULL\n");
 }
